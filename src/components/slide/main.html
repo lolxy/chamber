@@ -1,0 +1,21 @@
+<div id="slide">
+  <swiper :options="swiperOption" ref="mySwiper">
+    <!-- 幻灯内容 -->
+    <swiper-slide>
+      <a href="#" target="_blank">
+        <template>
+          <span class="cover" :style="`background-image:url(${require('@/assets/images/ic_home_banner.png')})`"></span>
+        </template>
+      </a>
+    </swiper-slide>
+    <swiper-slide>
+      <a href="#" target="_blank">
+        <template>
+          <span class="cover" :style="`background-image:url(${require('@/assets/images/ic_home_banner.png')})`"></span>
+        </template>
+      </a>
+    </swiper-slide>
+    <!-- 以下控件元素均为可选 -->
+    <div class="swiper-pagination" slot="pagination"></div>
+  </swiper>
+</div>
