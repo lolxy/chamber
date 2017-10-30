@@ -152,6 +152,7 @@ Vue.use(VueTimeago, {
  */
 require('normalize.css')
 require('./assets/scss/main.scss')
+require('swiper/dist/css/swiper.css')
 
 export default {
   router

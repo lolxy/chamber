@@ -7,5 +7,21 @@ $color3:#000000;
 $fontweight:bold;
 
 #topmodule{
-
+  .myswiper{
+    position: relative;
+    height: 372px;
+    overflow: hidden;
+    width:900px;
+    .swiper-container{
+      height: 372px;
+      .swiper-wrapper,.swiper-slide{
+        height: 372px;
+      }
+      a{
+        display: block;
+        width: 900px;
+        height: 372px;
+      }
+    }
+  }
 }
