@@ -1,4 +1,5 @@
 import topModule from '@/components/topmodule/main.vue'
+import centerListModule from '@/components/centermodule/main.vue'
 export default {
   name: 'home-page',
   computed: {
@@ -7,6 +8,7 @@ export default {
     }
   },
   components: {
-    topModule
+    topModule,
+    centerListModule
   }
 }

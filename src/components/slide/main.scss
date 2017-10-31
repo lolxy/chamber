@@ -1,20 +1,9 @@
 @import '~@/assets/scss/settings';
-$bgeeeeee:#eeeeee;
-$basefont:14px;
-$color1:#606060;
-$color2:#e03e3e;
-$color3:#000000;
-$fontweight:bold;
-
 #slide{
   position: relative;
-  height: 372px;
+  height: 410px;
   overflow: hidden;
   .swiper-container{
-    height: 100%;
-    .swiper-wrapper,.swiper-slide{
-      height: 372px;
-    }
     .cover{
       display: block;
       width: 100%;
@@ -28,5 +17,32 @@ $fontweight:bold;
   }
   .swiper-pagination-bullet.swiper-pagination-bullet-active{
     background-color: #e03e3e;
+  }
+
+  .newslidebox{
+    height: 38px;
+    overflow: hidden;
+    position: relative;
+    .newlist{
+      margin-right: 140px;
+      a{
+        display: block;
+        width: 100%;
+        height: 38px;
+        line-height: 38px;
+        color:#95989A;
+        &:hover{
+          color:#DD9100;
+        }
+      }
+    }
+
+    .more{
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 140px;
+      height: 38px;
+    }
   }
 }

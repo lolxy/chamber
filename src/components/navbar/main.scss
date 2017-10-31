@@ -1,11 +1,4 @@
 @import '~@/assets/scss/settings';
-$bgeeeeee:#eeeeee;
-$basefont:14px;
-$color1:#606060;
-$color2:#e03e3e;
-$color3:#000000;
-$fontweight:bold;
-
 #navbar{
   ul,li{
     list-style: none;
@@ -16,7 +9,7 @@ $fontweight:bold;
   .navbar-nav{
     height: 42px;
     line-height: 42px;
-    border-bottom: 3px solid #E03E3E;
+    border-bottom: 4px solid #E03E3E;
     li{
       width: 100px;
       text-align: center;

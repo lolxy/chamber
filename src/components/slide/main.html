@@ -1,4 +1,5 @@
 <div id="slide">
+  <div class="myswiper">
   <swiper :options="swiperOption" ref="mySwiper">
     <!-- 幻灯内容 -->
     <swiper-slide>
@@ -18,4 +19,23 @@
     <!-- 以下控件元素均为可选 -->
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
+  </div>
+
+  <div class="newslidebox">
+    <div class="newlist">
+      <swiper :options="newSwiperOption" ref="myNewSwiper">
+        <swiper-slide>
+          <a href="#" target="_blank" class="text-overflow">福建泉州纺织服装商会组织考察团前往米兰、巴黎等地进行为期三个礼拜的实地考察福建泉州纺织服装商会组织考察团前往米兰、巴黎等地进行为期三个礼拜的实地考察</a>
+        </swiper-slide>
+        <swiper-slide>
+          <a href="#" target="_blank" class="text-overflow">福建泉州纺织服装商会组织考察团前往米兰、巴黎等地进行为期三个礼拜的实地考察福建泉州纺织服装商会组织考察团前往米兰、巴黎等地进行为期三个礼拜的实地考察</a>
+        </swiper-slide>
+      </swiper>
+    </div>
+    <div class="more">
+      <a href="#" target="_blank">
+        <img src="~@/assets/images/ic_home_more.png" alt="more"/>
+      </a>
+    </div>
+  </div>
 </div>

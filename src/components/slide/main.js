@@ -15,17 +15,16 @@ export default {
         loop: true,
         autoplay: 6000,
         pagination : '.swiper-pagination',
-        paginationClickable :true
+        paginationClickable :true,
+        autoplayDisableOnInteraction : false
+      },
+      newSwiperOption:{
+        loop: true,
+        autoplay: 5000,
+        direction : 'vertical',
+        mousewheelControl : true,
+        autoplayDisableOnInteraction : false
       }
     }
-  },
-  computed:{
-    swiper() {
-     return this.$refs.mySwiper.swiper
-    }
-  },
-  mounted() {
-    console.log("每次切换都会触发我");
-    // this.swiper.slideTo(3, 1000, false)
- }
+  }
 };

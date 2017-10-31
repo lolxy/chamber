@@ -1,12 +1,8 @@
 @import '~@/assets/scss/settings';
-$bgeeeeee:#eeeeee;
-$basefont:14px;
-$color1:#606060;
-$color2:#e03e3e;
-$color3:#000000;
-$fontweight:bold;
-
 #topmodule{
+  .none-padding-left{
+    padding-left: 0 !important;
+  }
   .myswiper{
     position: relative;
     height: 372px;
