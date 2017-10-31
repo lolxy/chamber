@@ -36,14 +36,18 @@
         padding: 10px;
         margin: 0;
         margin-right: 6px;
+        min-height: 160px;
         li{
           overflow: hidden;
           height: 50px;
           a{
-            color:#DD9100;
+            color:rgba(221,145,0,.9);
             font-size: rem-calc(15);
             height: 24px;
             line-height: 24px;
+            &:hover{
+              color:rgba(221,145,0,1);
+            }
           }
           p{
             font-size: rem-calc(14);

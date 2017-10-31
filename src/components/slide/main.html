@@ -2,20 +2,25 @@
   <div class="myswiper">
   <swiper :options="swiperOption" ref="mySwiper">
     <!-- 幻灯内容 -->
-    <swiper-slide>
-      <a href="#" target="_blank">
-        <template>
-          <span class="cover" :style="`background-image:url(${require('@/assets/images/ic_home_banner.png')})`"></span>
-        </template>
-      </a>
-    </swiper-slide>
-    <swiper-slide>
-      <a href="#" target="_blank">
-        <template>
-          <span class="cover" :style="`background-image:url(${require('@/assets/images/ic_home_banner.png')})`"></span>
-        </template>
-      </a>
-    </swiper-slide>
+    <template v-if="bannerList.length">
+      <swiper-slide v-for="elem in bannerList" :key="elem.id">
+        <a :href="elem.contentUrl" target="_blank">
+          <template v-if="elem.images && elem.images.url">
+            <span class="cover" :style="`background-image:url(${elem.images.url});background-size:cover;`"></span>
+          </template>
+          <template v-else>
+            <span class="cover" :style="`background-image:url(${require('@/assets/images/ic_home_banner.png')});background-size:cover;`"></span>
+          </template>
+        </a>
+      </swiper-slide>
+    </template>
+    <template v-else>
+      <swiper-slide>
+        <a href="#" target="_blank">
+            <span class="cover" :style="`background-image:url(${require('@/assets/images/ic_home_banner.png')});background-size:cover;`"></span>
+        </a>
+      </swiper-slide>
+    </template>
     <!-- 以下控件元素均为可选 -->
     <div class="swiper-pagination" slot="pagination"></div>
   </swiper>
@@ -24,11 +29,8 @@
   <div class="newslidebox">
     <div class="newlist">
       <swiper :options="newSwiperOption" ref="myNewSwiper">
-        <swiper-slide>
-          <a href="#" target="_blank" class="text-overflow">福建泉州纺织服装商会组织考察团前往米兰、巴黎等地进行为期三个礼拜的实地考察福建泉州纺织服装商会组织考察团前往米兰、巴黎等地进行为期三个礼拜的实地考察</a>
-        </swiper-slide>
-        <swiper-slide>
-          <a href="#" target="_blank" class="text-overflow">福建泉州纺织服装商会组织考察团前往米兰、巴黎等地进行为期三个礼拜的实地考察福建泉州纺织服装商会组织考察团前往米兰、巴黎等地进行为期三个礼拜的实地考察</a>
+        <swiper-slide v-for="elem in newsList" :key="elem.id">
+          <a href="#" target="_blank" class="text-overflow">{{elem.title}}</a>
         </swiper-slide>
       </swiper>
     </div>
