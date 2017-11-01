@@ -10,7 +10,7 @@
             <ul class="no-bullet">
                 <li v-for="elem in newslist" :key="elem.id">
                   <a href="#" target="_blank" class="text-overflow" :title="elem.title">{{elem.title}}</a>
-                  <p class="text-overflow">由香港贸易发展局、香港科技大学深圳由香港贸易发展局、香港科技大学深圳由香港贸易发展局、香港科技大学深圳由香港贸易发展局、香港科技大学深圳</p>
+                  <p class="text-overflow">{{elem.abstractContent}}</p>
                 </li>
             </ul>
           </div>

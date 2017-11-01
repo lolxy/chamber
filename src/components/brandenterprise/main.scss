@@ -54,6 +54,7 @@
           position: relative;
           color:#606060;
           font-size: rem-calc(16);
+          overflow: hidden;
           &:hover{
             border: 1px solid #DD9100;
           }

@@ -7,59 +7,10 @@
       </div>
       <div class="panel-body">
         <ul class="no-bullet">
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p01.png" alt=""/>
-              <span>特盛纺织</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p02.png" alt=""/>
-              <span>华旭服饰</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p03.png" alt=""/>
-              <span>华旭服饰</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p04.png" alt=""/>
-              <span>华旭服饰</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p05.png" alt=""/>
-              <span>华旭服饰</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p06.png" alt=""/>
-              <span>华旭服饰</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p07.png" alt=""/>
-              <span>华旭服饰</span>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p08.png" alt=""/>
-              <span>华旭服饰</span>
+          <li v-for="elem in siteList" :key="elem.Id">
+            <a :href="`${baseUrl}/${elem.CompanyId}/profile`" target="_blank" :title="elem.Title">
+              <avatar :src="elem.FcRecommendVisualizationImgUrl" :size="280" mode="logo" :alt="elem.Title"></avatar>
+              <span>{{elem.Title}}</span>
             </a>
           </li>
         </ul>

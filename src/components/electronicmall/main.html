@@ -7,51 +7,14 @@
       </div>
       <div class="panel-body">
         <ul class="no-bullet">
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p1.png" alt=""/>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p2.png" alt=""/>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p3.png" alt=""/>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p4.png" alt=""/>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p5.png" alt=""/>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p6.png" alt=""/>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p7.png" alt=""/>
-            </a>
-          </li>
-
-          <li>
-            <a href="#" target="_blank">
-              <img src="~@/assets/images/ic_home_p8.png" alt=""/>
+          <li v-for="elem in companyList" :key="elem.companyId">
+            <a :href="`${baseUrl}/${elem.companyId}/profile`" target="_blank" :title="elem.companyInfo.BrandName">
+              <template v-if="elem.companyLogo">
+                <avatar :src="elem.companyLogo" :size="280" class="companyGard-avatarImage" mode="logo" :alt="elem.companyInfo.BrandName"></avatar>
+              </template>
+              <template v-else>
+                <avatar :src="getCompanyLogo(elem.companyInfo)" :size="280" class="companyGard-avatarImage" mode="logo" :alt="elem.companyInfo.BrandName"></avatar>
+              </template>
             </a>
           </li>
         </ul>
